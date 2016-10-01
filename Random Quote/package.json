@@ -1,0 +1,15 @@
+{
+  "name": "a-quote-a-day",
+  "version": "1.0.0",
+  "description": "Displays a random quote",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run_it" : "nodemon app.js"
+  },
+  "author": "Amit",
+  "license": "AIT",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
