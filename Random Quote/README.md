@@ -1,7 +1,7 @@
 In the HTML file I've an array of quotes and I select a random quote using :
 
-          var randomNumber=Math.floor((Math.random() * 20) + 1);
-          document.getElementById('quote').innerHTML=quoteArray[randomNumber-1];
+    var randomNumber=Math.floor((Math.random() * 20) + 1);
+    document.getElementById('quote').innerHTML=quoteArray[randomNumber-1];
 Then I'm creating a webserver using express :
 
     var express=require('express');
@@ -18,3 +18,5 @@ Then I'm creating a webserver using express :
     });
     
 Now its done :)
+
+-Amit Upadhyay
