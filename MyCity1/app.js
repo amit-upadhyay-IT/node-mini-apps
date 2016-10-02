@@ -4,8 +4,15 @@ var app = exp();
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){// this is mapping the home page
-    res.render('home.ejs', {}); // the template file will have data to be changed and the changing data has to be captured
+    res.render('home.ejs', {title:"I Love my city",
+                            headline:"Every city has its own personality"}); // the template file will have data to be changed and the changing data has to be captured
     // in javascript variables and the values for the changing data will be provided within the {}.
+
+    // the express library will automatically be able to find a file whose name is home.ejs and after that that file will be
+    // shown over here.
+
+    // we have only two variables inside our home.ejs file and those are title and headline and these have to be specified in
+    // these {}
 });
 
 app.get('/:city', function(req, res){// the : specifies the positional parameter of referring to the request parameter
