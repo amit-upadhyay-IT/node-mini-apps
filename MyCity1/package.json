@@ -1,0 +1,21 @@
+{
+  "name": "MyCity1",
+  "version": "1.0.0",
+  "description": "first implementation of ejs template without code generation",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "ejs",
+    "template"
+  ],
+  "author": "AMIT",
+  "license": "AIT",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0"
+  }
+}
