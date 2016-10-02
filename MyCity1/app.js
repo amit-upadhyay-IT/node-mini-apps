@@ -15,13 +15,41 @@ app.get('/', function(req, res){// this is mapping the home page
     // these {}
 });
 
-app.get('/:city', function(req, res){// the : specifies the positional parameter of referring to the request parameter
-    // so whenever you go this web site and say /some_city then at that time that some_city page has to be shown
-    // so that's why we are going to create a second template file which we are calling as 'city.ejs'.
+app.get('/:city', function(req, res){
 
-    // so this application is going to have two different template file, one for the home page and other for every city
+    // for city we want to use single template file and have data for 4-5 cities over there. So that's why we except the user to enter something like hostname/london, hostname/newyork
+    // etc. So the / and positional parameter are mentioned in 'city' variable.
+    // So we have to populate the values of title and headline appropriately.
 
-    res.render('city.ejs', {});
+    var cityname = req.params.city;
+
+    var titleValue;
+    var headlineValue;
+    // based on city I'll modify the titleValue and headlineValue
+
+    if (cityname === 'newyork')
+    {
+        titleValue = "New York";
+        headlineValue = "Business capital of the world";
+    }
+    else if (cityname == 'london')
+    {
+	    titleValue = "London";
+        headlineValue = "City of Thames";
+    }
+    else if (cityname == 'newdelhi')
+    {
+	    titleValue = "New Delhi";
+        headlineValue = "Place where I live";
+    }
+    else if (cityname == 'paris')
+    {
+	    titleValue = "Paris";
+        headlineValue = "Place where I never visited";
+    }
+
+    res.render('city.ejs', {title:titleValue,
+    headline:headlineValue});
 });
 
 var port = process.env.PORT || 4000;
